@@ -6,7 +6,7 @@ I am learning Clojure and Lisp at the same time, so I am re-writting the games f
 
 ## Installation
 
-Download from http://tamas-szabo.com/guess-my-number-0.1.0.jar
+Download from http://tamas-szabo.com/releases/guess-my-number-0.1.0-standalone.jar
 
 ## Usage
 
