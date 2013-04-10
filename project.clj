@@ -1,4 +1,4 @@
-(defproject guess-my-number "0.1.0-SNAPSHOT"
+(defproject guess-my-number "0.1.0"
   :description "Land of Lisp - Guess My Number (adapted to Clojure)"
   :url "https://github.com/sztamas/guess-my-number"
   :license {:name "Eclipse Public License"
