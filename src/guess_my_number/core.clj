@@ -50,13 +50,28 @@
 
 )
 
+
+(defn call-and-print
+  [f]
+  (println (format "My guess is: %d" (f))))
+
+
+;; one ui function for each user command
+
+(defn ui-smaller [] (call-and-print smaller))
+
+(defn ui-bigger [] (call-and-print bigger))
+
+(defn ui-start-over
+   []
+   (println "\nSo, you have a number to guess? Let's see ...")
+   (call-and-print start-over))
+
 (defn process-command
+  "Calls the functions corresponding to the user command `ui-smaller` for `smaller` etc."
   [command]
-  (let [f (ns-resolve 'guess-my-number.core (symbol command))
-        new-guess (f)]
-    (if (= command "start-over")
-      (println "\nSo, you have a number to guess? Let's see..."))
-    (println (format "My guess is: %d" new-guess))))
+  (let [f (ns-resolve 'guess-my-number.core (symbol (str "ui-" command)))]
+    (f)))
 
 
 (defn print-welcome-message
